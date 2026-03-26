@@ -12,8 +12,10 @@ This workspace consists of the materials used for the Auto-ISAC ACT Advanced Wir
   * Most Linux apps are prepackaged and be downloaded and installed via package manager
   * Debian/Ubuntu/Kali use apt on the command line
   * Redhat/Fedora use rpm on the command line
+  * Python comes standard
 * Windows - Windows apps
   * Most Windows apps can be found in the Microsoft Store
+  * Python downloads are here: https://www.python.org/downloads/windows/
 * Mobile apps (iPhone, Android)
 
 # Labs:
