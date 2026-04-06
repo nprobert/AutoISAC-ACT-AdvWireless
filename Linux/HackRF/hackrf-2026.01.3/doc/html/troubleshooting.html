@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting &mdash; HackRF  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/status.css" />
+
+  
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Synchronization Checklist" href="synchronization_checklist.html" />
+    <link rel="prev" title="Getting Help" href="getting_help.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            HackRF
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hackrf-not-detected-no-hackrf-boards-found">HackRF not detected / “No HackRF boards found.”</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#there-is-a-big-spike-in-the-center-of-the-received-spectrum">There is a big spike in the center of the received spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="synchronization_checklist.html">Synchronization Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hackrf_projects_mentions.html">HackRF Community Projects and Mentions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Hardware Platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hackrf_pro.html">HackRF Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hackrf_one.html">HackRF One</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rad1o.html">rad1o</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jawbreaker.html">Jawbreaker</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Hardware Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hackrf_minimum_requirements.html">Minimum Host System Requirements for HackRF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list_of_hardware_revisions.html">Hardware Revisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware_components.html">Hardware Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leds.html">LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hackrfs_buttons.html">Buttons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hackrf_connectors.html">Connectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="external_clock_interface.html">External Clock Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expansion_interface.html">Expansion Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware_triggering.html">Hardware Triggering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enclosure_options.html">Enclosure Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usb_cables.html">USB Cables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rf_shield_installation.html">RF Shield Installation Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Firmware</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="updating_firmware.html">Updating Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firmware_development_setup.html">Firmware Development Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LPC43XX_Debugging.html">LPC43xx Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LPC43XX_SGPIO_Configuration.html">LPC43xx SGPIO Configuration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing_hackrf_software.html">Installing HackRF Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hackrf_tools.html">HackRF Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_support.html">Third-Party Software Compatible With HackRF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_rate.html">Sampling Rate and Baseband Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setting_gain.html">Setting Gain Controls for RX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtual_machines.html">Virtual Machines</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Opera Cake Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="opera_cake.html">Opera Cake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opera_cake_faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opera_cake_hardware.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opera_cake_board_addressing.html">Board Addressing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opera_cake_port_configuration.html">Port Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opera_cake_modes_of_operation.html">Modes of Operation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HackRF</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting">
+<span id="id1"></span><h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h1>
+<section id="hackrf-not-detected-no-hackrf-boards-found">
+<h2>HackRF not detected / “No HackRF boards found.”<a class="headerlink" href="#hackrf-not-detected-no-hackrf-boards-found" title="Link to this heading"></a></h2>
+<p>If the software you’re using is unable to detect the HackRF hardware and/or <cite>hackrf_info</cite> returns “No HackRF boards found.”, this can be caused by a number of different software or hardware issues.</p>
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>If you are using a PortaPack addon, make sure to select “HackRF” mode from the main menu.</p></li>
+<li><p>If you are using a virtual machine or Windows Subsystem for Linux (WSL), make sure that it is configured to pass through the USB device.</p></li>
+<li><p>Check whether the device appears in <code class="docutils literal notranslate"><span class="pre">lsusb</span></code> (Linux), Device Manager (Windows), or System Report (macOS). If it doesn’t not appear, it could either be a firmware issue, an issue with the cable, or another hardware issue.</p></li>
+<li><p>Try booting the HackRF in DFU mode by holding the “DFU” button when plugging in the device. It should now appear as <cite>NXP Semiconductors LPC4330FET180 [ARM Cortex M4 + M0] (device firmware upgrade mode)</cite> in the locations listed above. If it does appear, then it was likely a firmware issue and you can follow the instructions to <a class="reference internal" href="updating_firmware.html#recovering-firmware"><span class="std std-ref">recover the SPI flash firmware</span></a>.</p></li>
+<li><p>If the device does not appear in DFU mode then it is likely to be an issue with the USB cable. Charge-only cables (which do not include the data lines) have become very common and will cause this symptom. Ideally, test the cable you’re using with another device that does some sort of data transfer to be sure that it works, or just try other cables.</p></li>
+<li><p>If the device still does not appear, it may be a less common issue or possibly a fault with the hardware. See <a class="reference internal" href="getting_help.html"><span class="doc">Getting Help</span></a> for information on where to ask for more support, and please include as much detail as you can about what you’ve already tried.</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="there-is-a-big-spike-in-the-center-of-the-received-spectrum">
+<span id="bigspike"></span><h2>There is a big spike in the center of the received spectrum<a class="headerlink" href="#there-is-a-big-spike-in-the-center-of-the-received-spectrum" title="Link to this heading"></a></h2>
+<p>If you see a large spike in the center of your FFT display regardless of the frequenecy you are tuned to, you are seeing a DC offset (or component or bias). The term “DC” comes from “Direct Current” in electronics. It is the unchanging aspect of a signal as opposed to the “alternating” part of the signal (AC) that changes over time.</p>
+<figure class="align-center" id="id3">
+<img alt="_images/dc_spike_grc.png" src="_images/dc_spike_grc.png" />
+<figcaption>
+<p><span class="caption-text">DC spike</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Take, for example, the signal represented by the digital sequence:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>-2,<span class="w"> </span>-1,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>-1,<span class="w"> </span>-2,<span class="w"> </span>-1,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>-1,<span class="w"> </span>-2,<span class="w"> </span>-1,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>-1
+</pre></div>
+</div>
+<figure class="align-center" id="id4">
+<img alt="_images/dc_spike_example_plot.png" src="_images/dc_spike_example_plot.png" />
+<figcaption>
+<p><span class="caption-text">Example signal</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This periodic signal contains a strong sinusoidal component spanning from -2 to 9. If we plot the spectrum of this signal, you can see one spike at the frequency of this sinusoid and a second spike at 0 Hz (DC).</p>
+<figure class="align-center" id="id5">
+<img alt="_images/dc_spike_example_spectrum.png" src="_images/dc_spike_example_spectrum.png" />
+<figcaption>
+<p><span class="caption-text">Spectrum of example signal</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If the signal spanned from values -2 to 2 (centered around zero), there would be no DC offset. Since it is centered around 3.5 (the number midway between -2 and 9), there is a DC component.</p>
+<p>Samples produced by HackRF are measurements of radio waveforms, but the measurement method is prone to a DC bias introduced by HackRF. It’s an artifact of the measurement system, not an indication of a received radio signal. DC offset is not unique to HackRF; it is common to all quadrature sampling systems.</p>
+<p>A high DC offset is also one of a few symptoms that can be caused by a software version mismatch. A common problem is that people run an old version of gr-osmosdr with newer firmware.</p>
+<section id="id2">
+<h3>Solution<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>There are a few options:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Ignore it. For many applications it isn’t a problem. You’ll learn to ignore it.</p></li>
+<li><p>Avoid it. The best way to handle DC offset for most applications is to use offset tuning; instead of tuning to your exact frequency of interest, tune to a nearby frequency so that the entire signal you are interested in is shifted away from 0 Hz but still within the received bandwidth. If your algorithm works best with your signal centered at 0 Hz (many do), you can shift the frequency in the digital domain, moving your signal of interest to 0 Hz and your DC offset away from 0 Hz. HackRF’s high maximum sampling rate can be a big help as it allows you to use offset tuning even for relatively wideband signals.</p></li>
+<li><p>Correct it. There are various ways of removing the DC offset in software. However, these techniques may degrade parts of the signal that are close to 0 Hz. It may look better, but that doesn’t necessarily mean that it is better from the standpoint of a demodulator algorithm, for example. Still, correcting the DC offset is often a good choice.</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_help.html" class="btn btn-neutral float-left" title="Getting Help" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="synchronization_checklist.html" class="btn btn-neutral float-right" title="Synchronization Checklist" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Great Scott Gadgets.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
