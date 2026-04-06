@@ -1,8 +1,12 @@
 #!/bin/sh
 
+# permissions
+sudo usermod -a -G plugdev $USER
+
 # install
 if [ ! -f /etc/udev/rules.d/53-hackrf.rules ]; then
-  echo 'ATTR{idVendor}=="1d50", ATTR{idProduct}=="6089", SYMLINK+="hackrf-one-%k", MODE="660", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/53-hackrf.rules
+  sudo cp hackrf/host/libhackrf/53-hackrf.rules /etc/udev/rules.d
+  sudo udevadm control --reload
   sudo udevadm trigger
 fi
 sudo modprobe hackrf
@@ -10,5 +14,5 @@ sudo modprobe hackrf
 # firmware update
 
 # status
-hackrf-info
+/usr/bin/hackrf_info
 
