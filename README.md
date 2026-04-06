@@ -8,6 +8,9 @@ This workspace consists of the materials used for the Auto-ISAC ACT Advanced Wir
 * Virtual Machine (VM)
   * The Virtual Machine can be downloaded from here: https://www.virtualbox.org/wiki/Downloads
   * The Kali VMs can be found here: https://www.kali.org/get-kali/#kali-virtual-machines
+  * The VirtualBox Extension Pack must be installed on host
+  * The VirtualBox Guest Additions for Linux must be installed on the Kali client!
+  	* https://linuxconfig.org/install-virtualbox-guest-additions-on-linux-guest
 * Linux - Linux apps
   * Most Linux apps are prepackaged and be downloaded and installed via package manager
   * Debian/Ubuntu/Kali use apt on the command line
