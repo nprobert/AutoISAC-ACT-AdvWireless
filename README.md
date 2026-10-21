@@ -6,6 +6,8 @@ This workspace consists of the materials used for the Auto-ISAC ACT Advanced Wir
 # Outline
 * Lab Presentation
 * Virtual Machine (VM)
+  * Due to past difficulties, I can no longer recommend running Kali Linux in a Virtual Machine as I prefer a bare metal installation (f*ck Windows)
+  * Anyhoo, for the brave and bold:
   * The Virtual Machine can be downloaded from here: https://www.virtualbox.org/wiki/Downloads
   * The Kali VMs can be found here: https://www.kali.org/get-kali/#kali-virtual-machines
   * The VirtualBox Extension Pack must be installed on host
@@ -25,6 +27,7 @@ This workspace consists of the materials used for the Auto-ISAC ACT Advanced Wir
 * Bluetooth
   * Hardware
     * Laptop Bluetooth
+    * Only needed with a Virtual Machine
     * Bluetooth Adapter ($10-20 @ Amazon) https://www.amazon.com/TP-Link-Bluetooth-Receiver-Controller-UB500/dp/B09DMP6T22/ref=sr_1_4?th=1
   * Software
   * Mobile
@@ -42,7 +45,9 @@ This workspace consists of the materials used for the Auto-ISAC ACT Advanced Wir
 * SDR
   * Hardware
     * HackRF One (Great Scott Gadgets) https://www.greatscottgadgets.com/hackrf/one/
+      *  Needs Linux 
     * Flipper Zero https://www.flipperzero.com https://flipper.net/
+      *  Any platform 
   * Software
     * GNU Radio https://www.gnuradio.org/
 	  * https://wiki.gnuradio.org/index.php/Download
@@ -51,9 +56,11 @@ This workspace consists of the materials used for the Auto-ISAC ACT Advanced Wir
 * RDS
   * Hardware
     * RTL-SDR https://www.amazon.com/dp/B0CD7558GT
+    * Any platform
 * WiFi
   * Hardware
     * Laptop WiFi
+    * Only needed with a Virtual Machine
     * Adapter WiFi https://www.amazon.com/dp/B0752CTSGD
   * Software
     * inSSIDer
